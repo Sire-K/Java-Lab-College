@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 //Lab 1
+=======
+>>>>>>> ae02114ae077aa34e3250a934d0594dfbbef67b7
 import java.util.Scanner;
 
 class lab {
@@ -7,6 +10,7 @@ class lab {
         System.err.println("Enter two numbers: ");
         Scanner scanner = new Scanner(System.in);
 
+<<<<<<< HEAD
         int a = 0;
         int b = 0;
 
@@ -44,6 +48,28 @@ class lab {
             System.out.println("Division by zero is not allowed.");
         }
 
+=======
+        if (scanner.hasNextInt()) {
+            int a = scanner.nextInt();
+            if (scanner.hasNextInt()) {
+                int b = scanner.nextInt();
+
+                System.out.println("The addition is: " + (a + b));
+                System.out.println("The subtraction is: " + (a - b));
+                System.out.println("The multiplication is: " + (a * b));
+
+                if (b != 0) {
+                    System.out.println("The division is: " + (a / b));
+                } else {
+                    System.out.println("Division by zero is not allowed.");
+                }
+            } else {
+                System.err.println("Invalid input. Please enter integers only.");
+            }
+        } else {
+            System.err.println("Invalid input. Please enter integers only.");
+        }
+>>>>>>> ae02114ae077aa34e3250a934d0594dfbbef67b7
         scanner.close();
     }
 }
