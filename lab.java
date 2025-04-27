@@ -1,25 +1,19 @@
-<<<<<<< HEAD
-
 //Lab 1
-=======
->>>>>>> ae02114ae077aa34e3250a934d0594dfbbef67b7
 import java.util.Scanner;
 
 class lab {
     public static void main(String[] args) {
-        System.err.println("Enter two numbers: ");
         Scanner scanner = new Scanner(System.in);
 
-<<<<<<< HEAD
         int a = 0;
         int b = 0;
 
         while (true) {
-            System.out.print("Enter your age: ");
-            String input = scanner.nextLine();
+            System.out.print("Enter the first number: ");
+            String input_a = scanner.nextLine();
 
-            if (isInteger(input)) {
-                a = Integer.parseInt(input);
+            if (isInteger(input_a)) {
+                a = Integer.parseInt(input_a);
                 break;
             } else {
                 System.out.println("Invalid input. Please enter a valid integer.");
@@ -27,11 +21,11 @@ class lab {
         }
 
         while (true) {
-            System.out.print("Enter your age: ");
-            String input = scanner.nextLine();
+            System.out.print("Enter the second number: ");
+            String input_b = scanner.nextLine();
 
-            if (isInteger(input)) {
-                b = Integer.parseInt(input);
+            if (isInteger(input_b)) {
+                b = Integer.parseInt(input_b);
                 break;
             } else {
                 System.out.println("Invalid input. Please enter a valid integer.");
@@ -48,28 +42,18 @@ class lab {
             System.out.println("Division by zero is not allowed.");
         }
 
-=======
-        if (scanner.hasNextInt()) {
-            int a = scanner.nextInt();
-            if (scanner.hasNextInt()) {
-                int b = scanner.nextInt();
-
-                System.out.println("The addition is: " + (a + b));
-                System.out.println("The subtraction is: " + (a - b));
-                System.out.println("The multiplication is: " + (a * b));
-
-                if (b != 0) {
-                    System.out.println("The division is: " + (a / b));
-                } else {
-                    System.out.println("Division by zero is not allowed.");
-                }
-            } else {
-                System.err.println("Invalid input. Please enter integers only.");
-            }
-        } else {
-            System.err.println("Invalid input. Please enter integers only.");
-        }
->>>>>>> ae02114ae077aa34e3250a934d0594dfbbef67b7
         scanner.close();
+    }
+
+    public static boolean isInteger(String str) {
+        if (str == null || str.isEmpty()) {
+            return false;
+        }
+        try {
+            Integer.parseInt(str);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 }
