@@ -1,7 +1,6 @@
-//Lab 1
 import java.util.Scanner;
 
-class lab {
+class Lab {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -11,24 +10,15 @@ class lab {
         while (true) {
             System.out.print("Enter the first number: ");
             String input_a = scanner.nextLine();
-
-            if (isInteger(input_a)) {
-                a = Integer.parseInt(input_a);
-                break;
-            } else {
-                System.out.println("Invalid input. Please enter a valid integer.");
-            }
-        }
-
-        while (true) {
             System.out.print("Enter the second number: ");
             String input_b = scanner.nextLine();
 
-            if (isInteger(input_b)) {
+            if (isInteger(input_a) && isInteger(input_b)) {
+                a = Integer.parseInt(input_a);
                 b = Integer.parseInt(input_b);
                 break;
             } else {
-                System.out.println("Invalid input. Please enter a valid integer.");
+                System.out.println("Invalid input. Please enter valid integers.");
             }
         }
 
@@ -36,7 +26,7 @@ class lab {
         System.out.println("The subtraction is: " + (a - b));
         System.out.println("The multiplication is: " + (a * b));
 
-        if (b != 0 && a != 0) {
+        if (b != 0) {
             System.out.println("The division is: " + (a / b));
         } else {
             System.out.println("Division by zero is not allowed.");
