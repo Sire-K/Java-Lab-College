@@ -2,7 +2,7 @@
 //Lab 1
 import java.util.Scanner;
 
-class Lab {
+class lab {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
