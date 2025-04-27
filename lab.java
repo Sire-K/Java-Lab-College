@@ -1,4 +1,3 @@
-
 // Lab Report 1
 import java.util.Scanner;
 
