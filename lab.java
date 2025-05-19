@@ -49,3 +49,50 @@ class lab {
         }
     }
 }
+
+//Lab 2
+import java.util.Scanner;
+
+public class GradeCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter marks obtained (0-100): ");
+        int marks = scanner.nextInt();
+
+        if (marks < 0 || marks > 100) {
+            System.out.println("Invalid input. Marks should be between 0 and 100.");
+            return;
+        }
+
+        String grade;
+        switch (marks / 10) {
+            case 10: // 100
+                grade = "A+";
+                break;
+            case 9:  // 90-99
+                grade = "A+";
+                break;
+            case 8:  // 80-89
+                grade = "A";
+                break;
+            case 7:  // 70-79
+                grade = "B+";
+                break;
+            case 6:  // 60-69
+                grade = "B";
+                break;
+            case 5:  // 50-59
+                grade = "C+";
+                break;
+            case 4:  // 40-49
+                grade = "C";
+                break;
+            default: // 0-39
+                grade = "F (Fail)";
+        }
+
+        System.out.println("Grade: " + grade);
+    }
+}
+
